@@ -2,8 +2,7 @@ import sys
 sys.path.append("../utils/")
 
 import collections
-#from utils.input import file_to_list
-from input_functions import file_to_list
+from functions import file_to_list
 
 input_sample_list = file_to_list("input-sample")
 input_list = file_to_list("input.txt")
