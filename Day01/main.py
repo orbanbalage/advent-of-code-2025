@@ -4,8 +4,8 @@ sys.path.append("../utils/")
 import collections
 from functions import file_to_list
 
-input_sample_list = file_to_list("input-sample", "\n")
-input_list = file_to_list("input.txt", "\n")
+input_sample_list = file_to_list("input-sample", "\n", pop_final=True)
+input_list = file_to_list("input.txt", "\n", pop_final=True)
 
 START = 50
 result = 0
