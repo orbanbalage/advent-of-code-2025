@@ -15,8 +15,11 @@ result = []
 # arrs = arr_to_arrs(input_sample_list, "")
 arrs = arr_to_arrs(input_list, "")
 
-ranges = [range(int(x.split("-")[0]), int(x.split("-")[1])+1) for x in arrs[0]]
-IDs = [int(x) for x in arrs[1]]
+ranges_arr = arrs[0]
+IDs_arr = arrs[1]
+
+ranges = [range(int(x.split("-")[0]), int(x.split("-")[1])+1) for x in ranges_arr]
+IDs = [int(x) for x in IDs_arr]
 
 for ID in IDs:
 	for r in ranges:
@@ -26,3 +29,5 @@ for ID in IDs:
 
 
 print(len(set(result)))
+
+
