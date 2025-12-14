@@ -46,3 +46,13 @@ def merge_range(range1, range2):
 	start = range1.start if range1.start < range2.start else range2.start
 	stop = range1.stop if range1.stop > range2.stop else range2.stop
 	return range(start, stop)
+
+def ranges_overlap(ranges):
+	for i in range(0, len(ranges)-1):
+		if ranges[i].stop < ranges[i+1].start:
+			continue
+		else:
+			return True
+	return False
+
+
