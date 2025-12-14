@@ -52,6 +52,10 @@ def ranges_overlap(ranges):
 		if ranges[i].stop < ranges[i+1].start:
 			continue
 		else:
+			new_range = merge_range(ranges[i], ranges[i+1])
+			ranges.pop(i)
+			ranges.pop(i)
+			ranges.insert(i, new_range)
 			return True
 	return False
 
