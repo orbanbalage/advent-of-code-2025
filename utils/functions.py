@@ -38,3 +38,11 @@ for idx, x in numpy.ndenumerate(nums_array):
 def arr_to_arrs(arr, separator):
 	SPLIT = arr.index(separator)
 	return [arr[0:SPLIT], arr[SPLIT+1:]]
+
+def range_overlap(range1, range2):
+	return not (range1.stop < range2.start or range2.stop < range1.start)
+
+def merge_range(range1, range2):
+	start = range1.start if range1.start < range2.start else range2.start
+	stop = range1.stop if range1.stop > range2.stop else range2.stop
+	return range(start, stop)
