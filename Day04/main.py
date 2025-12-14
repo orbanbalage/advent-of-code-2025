@@ -20,8 +20,6 @@ WINDOW_DIM = 3
 # nums_array = list_to_numarray(input_sample_list)
 nums_array = list_to_numarray(input_list)
 
-ARR_MAX_LEN = len(nums_array[0]) - 1
-
 # corners:
 # select only 0/n combos:
 v_c = sliding_window_view(nums_array, (WINDOW_DIM-1,WINDOW_DIM-1))
