@@ -30,3 +30,11 @@ def count_around_3x3(input_num_array, char_to_count):
 	arr.extend(input_num_array[0::2, 2:3].flatten().tolist())
 	arr.extend(input_num_array[0::2, 0:1].flatten().tolist())
 	return arr.count(char_to_count)
+"""
+for idx, x in numpy.ndenumerate(nums_array):
+	print(idx, x)
+"""
+
+def arr_to_arrs(arr, separator):
+	SPLIT = arr.index(separator)
+	return [arr[0:SPLIT], arr[SPLIT+1:]]
