@@ -4,7 +4,6 @@ sys.path.append("../utils/")
 import collections
 from functions import file_to_list
 from functions import list_to_numarray
-from functions import count_around_3x3
 
 import numpy
 from numpy.lib.stride_tricks import sliding_window_view
